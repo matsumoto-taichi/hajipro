@@ -13,7 +13,7 @@
         </p>
         <script>
             $('p').on('click', function(){
-                $(this).text('変更後の文字列だよ〜ん！');
+                $('p').text('変更後の文字列だよ〜ん！');
             });
         </script>
     </body>
