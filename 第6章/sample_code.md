@@ -182,3 +182,109 @@ function message(){
 </html>
 ```
 
+### 6.4.1
+```html
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"
+            ntegrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+
+        <h2>自己紹介フォーム</h2>
+        <p>お名前を入力してね：<input type="text" placeholder="お名前を入力してください"></p>
+        <p id="kakunin">あなたのお名前は：</p>
+        <button>確認する</button>
+
+    </body>
+</html>
+```
+
+### 6.4.2
+```html
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"
+            ntegrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+
+        <h2>自己紹介フォーム</h2>
+        <p>お名前を入力してね：<input type="text" placeholder="お名前を入力してください"></p>
+        <p id="kakunin">あなたのお名前は：</p>
+        <button>確認する</button>
+
+        <script>
+            $('button').on('click', function () {
+                name = $('input').val();
+                $('#kakunin').append(name);
+            });
+        </script>
+    </body>
+</html>
+```
+
+```html
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"
+            ntegrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+
+        <h2>自己紹介フォーム</h2>
+        <p>お名前を入力してね：<input type="text" placeholder="お名前を入力してください"></p>
+        <p id="kakunin">あなたのお名前は：</p>
+        <button>確認する</button>
+
+        <script>
+            x = 'yet';
+            
+            $('button').on('click', function () {
+                name = $('input').val();
+                $('#kakunin').append(name);
+
+                x = 'already';
+            });
+        </script>
+    </body>
+</html>
+```
+
+```html
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"
+            ntegrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+
+        <h2>自己紹介フォーム</h2>
+        <p>お名前を入力してね：<input type="text" placeholder="お名前を入力してください"></p>
+        <p id="kakunin">あなたのお名前は：</p>
+        <button>確認する</button>
+
+        <script>
+            x = 'yet';
+            
+            $('button').on('click', function () {
+
+                if (x == 'already') return;
+                
+                name = $('input').val();
+                $('#kakunin').append(name);
+
+                x = 'already';
+            });
+        </script>
+    </body>
+</html>
+```
